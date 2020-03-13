@@ -105,8 +105,8 @@ const vueConfig = {
 		//   }
 		// }
 	},
-	publicPath:'/admin',
-	outputDir: '../public/admin',
+	publicPath:'/adminv',
+	outputDir: '../public/adminv',
 	/*indexPath: process.env.NODE_ENV === 'production'
 		? '../admin.blade.php'
 		: 'index.html',*/

@@ -54,8 +54,8 @@ const vueConfig = {
 		//   }
 		// }
 	},
-	publicPath:'/wap',
-	outputDir: '../public/wap',
+	publicPath:'/mobilev',
+	outputDir: '../public/mobilev',
 	/*indexPath: process.env.NODE_ENV === 'production'
 		? '../resources/views/admin.blade.php'
 		: '../index.html',*/

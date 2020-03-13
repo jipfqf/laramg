@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::group(['middleware' => 'web'], function () {
-	Route::any('/admin/{any}', 'LaravueController@admin')->where('any', '.*');
-	Route::any('/wap/{any}', 'LaravueController@wap')->where('any', '.*');
+	Route::any('/admin{any}', 'LaravueController@admin')->where('any', '.*');
+	Route::any('/wap{any}', 'LaravueController@wap')->where('any', '.*');
 	Route::any('/{any}', 'LaravueController@index')->where('any', '.*');
 });
