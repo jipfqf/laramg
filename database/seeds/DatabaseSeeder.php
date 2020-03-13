@@ -11,6 +11,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+		DB::table('users')->insert([
+			'name' => 'admin',
+			'show_name' => 'admin',
+			'state' =>1,
+			'password' => Hash::make('111111'),
+			'created_at' =>\Illuminate\Support\Facades\DB::raw('now()'),
+			'updated_at' =>\Illuminate\Support\Facades\DB::raw('now()')
+		]);
     }
 }

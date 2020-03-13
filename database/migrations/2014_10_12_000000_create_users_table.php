@@ -16,11 +16,16 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
-            $table->timestamps();
+			$table->string('show_name')->nullable();
+			$table->string('email')->nullable();
+			$table->string('password');
+			$table->string('login_ip')->nullable();
+			$table->string('last_login_ip')->nullable();
+            $table->string('avatar')->comment('头像')->nullable();
+            $table->string('phone')->comment('手机号')->nullable();
+            $table->tinyInteger('state')->default(1)->comment('状态：1-正常，0-锁定')->index();
+			$table->dateTime('created_at');
+			$table->dateTime('updated_at');
         });
     }
 
