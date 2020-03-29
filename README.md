@@ -9,6 +9,6 @@ http://laramg.jipfqf.top/admin
 
 **TODO**
 
-1、正常登录  
+~~1、正常登录~~（composer update一下后先migrate然后db:seed,最后jwt:secret）  
 2、权限设置  
 3、附件管理  
