@@ -14,6 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group(['middleware' => 'api'], function () {
+	Route::any('auth/login', 'AuthController@login');
+	Route::get('auth/user', 'AuthController@user');
+	Route::get('verfycode', 'AuthController@verfycode');
+	Route::post('upload', 'FileController@fileUpload');
+	Route::group(['namespace'=>'Admin','middleware' => ['auth:api','permission']], function () {
+
+	});
 });

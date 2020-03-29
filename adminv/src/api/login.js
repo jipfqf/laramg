@@ -28,9 +28,18 @@ export function getSmsCaptcha (parameter) {
   })
 }
 
+export function getVerfycode () {
+	return axios({
+		url: '/verfycode',
+		method: 'get',
+		headers: {
+			'Content-Type': 'application/json;charset=UTF-8'
+		}
+	})
+}
 export function getInfo () {
   return axios({
-    url: '/user/info',
+    url: '/auth/user',
     method: 'get',
     headers: {
       'Content-Type': 'application/json;charset=UTF-8'
